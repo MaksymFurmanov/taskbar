@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+.tasks-list {
+    max-width: 25rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tasks-list h1{
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tasks-list ul {
+    padding-left: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*Add task form section*/
+form {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
 }
 
-.App-link {
-  color: #61dafb;
+form label {
+    font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form button {
+    margin-left: 1rem;
+}
+
+/*Task section*/
+
+.task, form {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 1rem;
+    padding: 1rem;
+    border: black 1px solid;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.task {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task label {
+    margin: 0 0 0 1rem;
+    display: inline;
+}
+
+.task button {
+    min-width: 3rem;
+    border-radius: 5px;
+    padding: 0.2rem;
+}
+
+.task button:first-child {
+    background-color:blue;
+    border-color: blue;
+    margin-right: 1rem;
+}
+
+.task button:last-child {
+    background-color: red;
+    border-color: red;
+}
+
+.task input:checked + label {
+    text-decoration: line-through;
+    text-decoration-thickness: 0.1rem;
 }
