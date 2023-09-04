@@ -25,12 +25,11 @@ export const reducer = (state, action) => {
                 let fa = a.text.toLowerCase(), fb = b.text.toLowerCase();
                 if (fa > fb) {
                     return action.sortType ? -1 : 1;
-                } else if (fa > fb) {
+                } else if (fa < fb) {
                     return action.sortType ? 1 : -1;
                 }
                 return 0;
             })
-            newState.forEach((obj) => console.log(obj.text));
             return newState;
         default:
             return state;
