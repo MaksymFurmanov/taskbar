@@ -1,11 +1,11 @@
 import './App.css';
-import './components/TaskList/TasksList'
-import TasksList from "./components/TaskList/TasksList";
+import './components/TaskList/TasksBar'
+import TasksBar from "./components/TaskList/TasksBar";
 
 function App() {
     return (
         <div>
-            <TasksList/>
+            <TasksBar/>
         </div>
     );
 }
